@@ -1,0 +1,16 @@
+services:
+  pizza-db:
+    image: postgres:15
+    container_name: pizza-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: pizzaUser
+      POSTGRES_PASSWORD: pizzaPass
+      POSTGRES_DB: pizzaDb
+    ports:
+      - 5002:5432
+    volumes:
+      - pizza-db-data:/var/lib/postgresql/data
+
+volumes:
+  pizza-db-data:

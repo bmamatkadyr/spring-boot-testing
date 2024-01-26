@@ -1,1 +1,12 @@
-
+# datasource
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5002/pizzaDb
+    username: pizzaUser
+    password: pizzaPass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
